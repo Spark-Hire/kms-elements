@@ -8,6 +8,7 @@ set(GENERATE_TESTS FALSE CACHE BOOL "Always build tests: add `make check_build` 
 set(DISABLE_TESTS FALSE CACHE BOOL "Enable running `make check` during the building process")
 set(VALGRIND_NUM_CALLERS 20 CACHE STRING "Valgrind option: maximum number of entries shown in stack traces")
 set(ENABLE_EXPERIMENTAL_TESTS OFF CACHE BOOL "Enable tests that are not yet stable")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-error=deprecated-declarations")
 
 message("If KurentoHelpers is not found, you need to install 'kms-cmake-utils' from the Kurento repository")
 find_package(KurentoHelpers REQUIRED)
